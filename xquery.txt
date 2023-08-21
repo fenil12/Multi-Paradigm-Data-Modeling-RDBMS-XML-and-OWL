@@ -1,0 +1,46 @@
+1)List the ID and name of all students.
+-
+for $x in //table[@name="student"]
+return concat($x/column[@name="student_id"], " ",$x/column[@name="student_name"])
+
+2)List the name of all courses together with their type.
+-
+for $x in //table[@name="course"]
+return concat($x/column[@name="course_name"], " - ",$x/column[@name="course_type"])
+
+3) List the ID and name of all students together with the course name and course type that 
+they study.
+-
+for $x in //table[@name='student']
+for $y in //table[@name='course']
+where (
+ $x/column[@name="fk_course_id"] = $y/column[@name="course_id"]
+)
+return concat($x/column[@name="student_id"] , " || ",
+$x/column[@name="student_name"] , " || ",
+$y/column[@name="course_name"] ," || ",
+$y/column[@name="course_type"])
+
+4) List the ID and name of all modules together with the name and ID of the member of 
+staff who teaches this module. 
+-
+for $x in //table[@name='module']
+for $y in //table[@name='employee']
+where (
+ $x/column[@name="fk_employee_id"] = $y/column[@name="employee_id"]
+)
+return concat($x/column[@name="module_code"] , " || ",
+$x/column[@name="module_name"] , " || ",
+$y/column[@name="employee_id"] ," || ",
+$y/column[@name="employee_name"])
+
+5)List the ID and name of all students together with the name of their supervisors.
+-
+for $x in //table[@name='student']
+for $y in //table[@name='employee']
+where (
+ $x/column[@name="fk_employee_id"] = $y/column[@name="employee_id"]
+)
+return concat($x/column[@name="student_id"] , " || ",
+$x/column[@name="student_name"] , " || ",
+$y/column[@name="employee_name"])

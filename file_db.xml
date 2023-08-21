@@ -1,0 +1,296 @@
+<!--DTD and xml with test data-->
+
+<!DOCTYPE database [
+	<!ELEMENT database (table)*>
+	<!ELEMENT table (column)*>
+	<!ATTLIST table name CDATA #REQUIRED>
+	<!ELEMENT column (#PCDATA)>
+	<!ATTLIST column name CDATA #REQUIRED>
+	<!ATTLIST column dept_id CDATA #IMPLIED>
+	<!ATTLIST column dept_name CDATA #IMPLIED>
+	<!ATTLIST column office_id CDATA #IMPLIED>
+	<!ATTLIST column location CDATA #IMPLIED>
+	<!ATTLIST column employee_id CDATA #IMPLIED>
+	<!ATTLIST column employee_name CDATA #IMPLIED>
+	<!ATTLIST column dob CDATA #IMPLIED>
+	<!ATTLIST column employee_role CDATA #IMPLIED>
+	<!ATTLIST column employee_position CDATA #IMPLIED>
+	<!ATTLIST column fk_dept_id CDATA #IMPLIED>
+	<!ATTLIST column course_id CDATA #IMPLIED>
+	<!ATTLIST column course_type CDATA #IMPLIED>
+	<!ATTLIST column course_name CDATA #IMPLIED>
+	<!ATTLIST column credits CDATA #IMPLIED>
+	<!ATTLIST column module_code CDATA #IMPLIED>
+	<!ATTLIST column module_name CDATA #IMPLIED>
+	<!ATTLIST column module_type CDATA #IMPLIED>
+	<!ATTLIST column fk_course_id CDATA #IMPLIED>
+	<!ATTLIST column fk_employee_id CDATA #IMPLIED>
+	<!ATTLIST column student_id CDATA #IMPLIED>
+	<!ATTLIST column student_name CDATA #IMPLIED>
+	<!ATTLIST column gender CDATA #IMPLIED>
+	<!ATTLIST column address CDATA #IMPLIED>
+	<!ATTLIST column contact_details CDATA #IMPLIED>
+	<!ATTLIST column exam_record_id CDATA #IMPLIED>
+	<!ATTLIST column year CDATA #IMPLIED>
+	<!ATTLIST column semester CDATA #IMPLIED>
+	<!ATTLIST column mark_achieved CDATA #IMPLIED>
+	<!ATTLIST column mark_achieved CDATA #IMPLIED>
+	<!ATTLIST column fk_module_code CDATA #IMPLIED>
+	<!ATTLIST column fk_student_id CDATA #IMPLIED>
+]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+	<table name="department">
+		<column name="dept_id">1</column>
+		<column name="dept_name">Computer and Information Science</column>
+	</table>
+	<table name="department">
+		<column name="dept_id">2</column>
+		<column name="dept_name">Strathclyde Institute of Pharmacy &amp; Biomedical Sciences</column>
+	</table>
+	<table name="department">
+		<column name="dept_id">3</column>
+		<column name="dept_name">Mathematics and Statistics</column>
+	</table>
+	<table name="department">
+		<column name="dept_id">4</column>
+		<column name="dept_name">Physics</column>
+	</table>
+	<table name="department">
+		<column name="dept_id">5</column>
+		<column name="dept_name">Pure and Applied Chemistry</column>
+	</table>
+	
+	<table name="office">
+		<column name="office_id">1</column>
+		<column name="location">Glasgow</column>
+	</table>
+	<table name="office">
+		<column name="office_id">2</column>
+		<column name="location">London</column>
+	</table>
+	<table name="office">
+		<column name="office_id">3</column>
+		<column name="location">Mumbai</column>
+	</table>
+	<table name="office">
+		<column name="office_id">4</column>
+		<column name="location">Paris</column>
+	</table>
+	<table name="office">
+		<column name="office_id">5</column>
+		<column name="location">Sydney</column>
+	</table>
+
+	<table name="employee">
+		<column name="employee_id">1</column>
+		<column name="employee_name">John Smith</column>
+		<column name="dob">1985-05-15</column>
+		<column name="employee_role">academic</column>
+		<column name="employee_position">lecturer</column>
+		<column name="fk_dept_id">1</column>
+		<column name="fk_office_id">1</column>
+	</table>
+	<table name="employee">
+		<column name="employee_id">2</column>
+		<column name="employee_name">Jane Doe</column>
+		<column name="dob">1987-11-02</column>
+		<column name="employee_role">admin</column>
+		<column name="employee_position">manager</column>
+		<column name="fk_dept_id">1</column>
+		<column name="fk_office_id">1</column>
+	</table>
+	<table name="employee">
+		<column name="employee_id">3</column>
+		<column name="employee_name">John Cena</column>
+		<column name="dob">1990-08-10</column>
+		<column name="employee_role">academic</column>
+		<column name="employee_position">professor</column>
+		<column name="fk_dept_id">1</column>
+		<column name="fk_office_id">1</column>
+	</table>
+	<table name="employee">
+		<column name="employee_id">4</column>
+		<column name="employee_name">Ash Ketchum</column>
+		<column name="dob">1992-03-22</column>
+		<column name="employee_role">admin</column>
+		<column name="employee_position">assistant manager</column>
+		<column name="fk_dept_id">2</column>
+		<column name="fk_office_id">1</column>
+	</table>
+	<table name="employee">
+		<column name="employee_id">5</column>
+		<column name="employee_name">Naruto Uzumaki</column>
+		<column name="dob">1988-09-01</column>
+		<column name="employee_role">academic</column>
+		<column name="employee_position">assistant professor</column>
+		<column name="fk_dept_id">1</column>
+		<column name="fk_office_id">1</column>
+	</table>
+
+	<table name="course">
+		<column name="course_id">1</column>
+		<column name="course_type">undergraduate</column>
+		<column name="course_name">Bachelor of Science in Computer Science</column>
+		<column name="credits">240</column>
+	</table>
+	<table name="course">
+		<column name="course_id">2</column>
+		<column name="course_type">postgraduate</column>
+		<column name="course_name">Master of Science in Physics</column>
+		<column name="credits">180</column>
+	</table>
+	<table name="course">
+		<column name="course_id">3</column>
+		<column name="course_type">undergraduate</column>
+		<column name="course_name">Bachelor of Science in Chemistry</column>
+		<column name="credits">240</column>
+	</table>
+	<table name="course">
+		<column name="course_id">4</column>
+		<column name="course_type">postgraduate</column>
+		<column name="course_name">Master of Science in Data Science</column>
+		<column name="credits">180</column>
+	</table>
+	<table name="course">
+		<column name="course_id">5</column>
+		<column name="course_type">undergraduate</column>
+		<column name="course_name">Bachelor of Science in Mathematics</column>
+		<column name="credits">240</column>
+	</table>
+
+	<table name="module">
+		<column name="module_code">101</column>
+		<column name="module_name">Physics Project Dissertation</column>
+		<column name="module_type">Compulsory</column>
+		<column name="credits">60</column>
+		<column name="fk_course_id">2</column>
+		<column name="fk_employee_id">5</column>
+	</table>
+	<table name="module">
+		<column name="module_code">102</column>
+		<column name="module_name">Algorithms and Data Structures</column>
+		<column name="module_type">Compulsory</column>
+		<column name="credits">20</column>
+		<column name="fk_course_id">1</column>
+		<column name="fk_employee_id">1</column>
+	</table>
+	<table name="module">
+		<column name="module_code">103</column>
+		<column name="module_name">Introduction to Pharmacology</column>
+		<column name="module_type">Elective</column>
+		<column name="credits">10</column>
+		<column name="fk_course_id">3</column>
+		<column name="fk_employee_id">3</column>
+	</table>
+	<table name="module">
+		<column name="module_code">104</column>
+		<column name="module_name">Calculus and Analysis</column>
+		<column name="module_type">Compulsory</column>
+		<column name="credits">20</column>
+		<column name="fk_course_id">5</column>
+		<column name="fk_employee_id">1</column>
+	</table>
+	<table name="module">
+		<column name="module_code">105</column>
+		<column name="module_name">Software Engineering</column>
+		<column name="module_type">Compulsory</column>
+		<column name="credits">20</column>
+		<column name="fk_course_id">1</column>
+		<column name="fk_employee_id">1</column>
+	</table>
+
+	<table name="student">
+		<column name="student_id">1</column>
+		<column name="student_name">Lara Croft</column>
+		<column name="gender">Female</column>
+		<column name="dob">2001-04-15</column>
+		<column name="address">123 Main Street, Glasgow</column>
+		<column name="contact_details">123-456-7890</column>
+		<column name="fk_course_id">1</column>
+		<column name="fk_employee_id">1</column>
+	</table>
+	<table name="student">
+		<column name="student_id">2</column>
+		<column name="student_name">Harry Maguire</column>
+		<column name="gender">Male</column>
+		<column name="dob">2002-07-22</column>
+		<column name="address">456 High Street, London</column>
+		<column name="contact_details">987-654-3210</column>
+		<column name="fk_course_id">2</column>
+		<column name="fk_employee_id">3</column>
+	</table>
+	<table name="student">
+		<column name="student_id">3</column>
+		<column name="student_name">Kalpana Chawla</column>
+		<column name="gender">Female</column>
+		<column name="dob">2001-01-05</column>
+		<column name="address">789 West Street, Mumbai</column>
+		<column name="contact_details">567-890-1234</column>
+		<column name="fk_course_id">1</column>
+		<column name="fk_employee_id">1</column>
+	</table>
+	<table name="student">
+		<column name="student_id">4</column>
+		<column name="student_name">David Brown</column>
+		<column name="gender">Male</column>
+		<column name="dob">2002-11-30</column>
+		<column name="address">321 East Street, Paris</column>
+		<column name="contact_details">234-567-8901</column>
+		<column name="fk_course_id">4</column>
+		<column name="fk_employee_id">5</column>
+	</table>
+	<table name="student">
+		<column name="student_id">5</column>
+		<column name="student_name">Emily Davis</column>
+		<column name="gender">Female</column>
+		<column name="dob">2001-06-18</column>
+		<column name="address">654 North Street, Sydney</column>
+		<column name="contact_details">901-234-5678</column>
+		<column name="fk_course_id">5</column>
+		<column name="fk_employee_id">5</column>
+	</table>
+
+	<table name="exam_record">
+		<column name="exam_record_id">1</column>
+		<column name="year">2021</column>
+		<column name="semester">Spring</column>
+		<column name="mark_achieved">75</column>
+		<column name="fk_module_code">101</column>
+		<column name="fk_student_id">1</column>
+	</table>
+	<table name="exam_record">
+		<column name="exam_record_id">2</column>
+		<column name="year">2021</column>
+		<column name="semester">Spring</column>
+		<column name="mark_achieved">40</column>
+		<column name="fk_module_code">102</column>
+		<column name="fk_student_id">2</column>
+	</table>
+	<table name="exam_record">
+		<column name="exam_record_id">3</column>
+		<column name="year">2021</column>
+		<column name="semester">Winter</column>
+		<column name="mark_achieved">62</column>
+		<column name="fk_module_code">103</column>
+		<column name="fk_student_id">3</column>
+	</table>
+	<table name="exam_record">
+		<column name="exam_record_id">4</column>
+		<column name="year">2021</column>
+		<column name="semester">Spring</column>
+		<column name="mark_achieved">80</column>
+		<column name="fk_module_code">104</column>
+		<column name="fk_student_id">4</column>
+	</table>
+	<table name="exam_record">
+		<column name="exam_record_id">5</column>
+		<column name="year">2021</column>
+		<column name="semester">Spring</column>
+		<column name="mark_achieved">35</column>
+		<column name="fk_module_code">105</column>
+		<column name="fk_student_id">5</column>
+	</table>
+</database>

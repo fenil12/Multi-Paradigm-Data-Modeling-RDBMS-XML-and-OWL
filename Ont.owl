@@ -1,0 +1,833 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#"
+     xml:base="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Assignment="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Delivers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Delivers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#EmployedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#EmployedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#RecordsBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#RecordsBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Registers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Registers">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#StoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#StoredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Supervises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Supervises">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#WorksAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#WorksAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseCredits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseCredits"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasCourseType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasDepartmentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasDepartmentId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasDepartmentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasDepartmentName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeDob -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeDob"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeePosition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeePosition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasEmployeeRole"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasExamRecordId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasExamRecordId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasMarkAchieved -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasMarkAchieved"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleCredits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleCredits"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasModuleType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasOfficeId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasOfficeId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasSemester -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasSemester"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentAddress"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentContactDetails -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentContactDetails">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentDob -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentDob"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentGender"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasStudentName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#hasYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Algorithms_and_Data_Structures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Algorithms_and_Data_Structures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <RecordsBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#2"/>
+        <hasModuleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</hasModuleCode>
+        <hasModuleCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasModuleCredits>
+        <hasModuleName>Algorithms and Data Structures</hasModuleName>
+        <hasModuleType>Compulsory</hasModuleType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Ash_Ketchum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Ash_Ketchum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <EmployedBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Strathclyde_Institute_of_Pharmacy_&amp;_Biomedical_Sciences"/>
+        <WorksAt rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow"/>
+        <hasEmployeeDob>1992-03-22</hasEmployeeDob>
+        <hasEmployeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasEmployeeId>
+        <hasEmployeeName>Ash Ketchum</hasEmployeeName>
+        <hasEmployeePosition>assistant manager</hasEmployeePosition>
+        <hasEmployeeRole>admin</hasEmployeeRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Chemistry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Chemistry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+        <hasCourseCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</hasCourseCredits>
+        <hasCourseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasCourseId>
+        <hasCourseName>Bachelor of Science in Chemistry</hasCourseName>
+        <hasCourseType>undergraduate</hasCourseType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Computer_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Computer_Science">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+        <hasCourseCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</hasCourseCredits>
+        <hasCourseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasCourseId>
+        <hasCourseName>Bachelor of Science in Computer Science</hasCourseName>
+        <hasCourseType>undergraduate</hasCourseType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Mathematics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Mathematics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+        <hasCourseCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</hasCourseCredits>
+        <hasCourseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasCourseId>
+        <hasCourseName>Bachelor of Science in Mathematics</hasCourseName>
+        <hasCourseType>undergraduate</hasCourseType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Calculus_and_Analysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Calculus_and_Analysis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <hasModuleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</hasModuleCode>
+        <hasModuleCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasModuleCredits>
+        <hasModuleName>Calculus and Analysis</hasModuleName>
+        <hasModuleType>Compulsory</hasModuleType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+        <hasDepartmentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDepartmentId>
+        <hasDepartmentName>Computer and Information Science</hasDepartmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#David_Brown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#David_Brown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <Registers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Data_Science"/>
+        <StoredBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#4"/>
+        <hasStudentAddress>321 East Street, Paris</hasStudentAddress>
+        <hasStudentContactDetails>234-567-8901</hasStudentContactDetails>
+        <hasStudentDob>2002-11-30</hasStudentDob>
+        <hasStudentGender>Male</hasStudentGender>
+        <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasStudentId>
+        <hasStudentName>David Brown</hasStudentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Emily_Davis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Emily_Davis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <Registers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Mathematics"/>
+        <StoredBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#5"/>
+        <hasStudentAddress>654 North Street, Sydney</hasStudentAddress>
+        <hasStudentContactDetails>901-234-5678</hasStudentContactDetails>
+        <hasStudentDob>2001-06-18</hasStudentDob>
+        <hasStudentGender>Female</hasStudentGender>
+        <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasStudentId>
+        <hasStudentName>Emily Davis</hasStudentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+        <hasLocation>Glasgow</hasLocation>
+        <hasOfficeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasOfficeId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Harry_Maguire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Harry_Maguire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <Registers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Physics"/>
+        <StoredBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#2"/>
+        <hasStudentAddress>456 High Street, London</hasStudentAddress>
+        <hasStudentContactDetails>987-654-3210</hasStudentContactDetails>
+        <hasStudentDob>2002-07-22</hasStudentDob>
+        <hasStudentGender>Male</hasStudentGender>
+        <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasStudentId>
+        <hasStudentName>Harry Maguire</hasStudentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Introduction_to_Pharmacology -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Introduction_to_Pharmacology">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <RecordsBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#3"/>
+        <hasModuleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</hasModuleCode>
+        <hasModuleCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasModuleCredits>
+        <hasModuleName>Introduction to Pharmacology</hasModuleName>
+        <hasModuleType>Elective</hasModuleType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Jane_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Jane_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <EmployedBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science"/>
+        <WorksAt rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow"/>
+        <hasEmployeeDob>1987-11-02</hasEmployeeDob>
+        <hasEmployeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasEmployeeId>
+        <hasEmployeeName>Jane Doe</hasEmployeeName>
+        <hasEmployeeRole>admin</hasEmployeeRole>
+        <hasEmployeeRole>manager</hasEmployeeRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#John_Cena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#John_Cena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <Delivers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Introduction_to_Pharmacology"/>
+        <EmployedBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science"/>
+        <Supervises rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Harry_Maguire"/>
+        <WorksAt rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow"/>
+        <hasEmployeeDob>1990-08-10</hasEmployeeDob>
+        <hasEmployeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasEmployeeId>
+        <hasEmployeeName>John Cena</hasEmployeeName>
+        <hasEmployeePosition>professor</hasEmployeePosition>
+        <hasEmployeeRole>academic</hasEmployeeRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#John_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#John_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <Delivers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Algorithms_and_Data_Structures"/>
+        <Delivers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Calculus_and_Analysis"/>
+        <Delivers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Software_Engineering"/>
+        <EmployedBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science"/>
+        <Supervises rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Kalpana_Chawla"/>
+        <Supervises rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Lara_Croft"/>
+        <WorksAt rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow"/>
+        <hasEmployeeDob>1985-05-15</hasEmployeeDob>
+        <hasEmployeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasEmployeeId>
+        <hasEmployeeName>John Smith</hasEmployeeName>
+        <hasEmployeePosition>lecturer</hasEmployeePosition>
+        <hasEmployeeRole>academic</hasEmployeeRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Kalpana_Chawla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Kalpana_Chawla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <Registers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Computer_Science"/>
+        <hasStudentAddress>789 West Street, Mumbai</hasStudentAddress>
+        <hasStudentContactDetails>567-890-1234</hasStudentContactDetails>
+        <hasStudentDob>2001-01-05</hasStudentDob>
+        <hasStudentGender>Female</hasStudentGender>
+        <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasStudentId>
+        <hasStudentName>Kalpana Chawla</hasStudentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Lara_Croft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Lara_Croft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        <Registers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Bachelor_of_Science_in_Computer_Science"/>
+        <StoredBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#1"/>
+        <hasStudentAddress>123 Main Street, Glasgow</hasStudentAddress>
+        <hasStudentContactDetails>123-456-7890</hasStudentContactDetails>
+        <hasStudentDob>2001-04-15</hasStudentDob>
+        <hasStudentGender>Female</hasStudentGender>
+        <hasStudentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasStudentId>
+        <hasStudentName>Lara Croft</hasStudentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#London -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#London">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+        <hasLocation>London</hasLocation>
+        <hasOfficeId rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</hasOfficeId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Data_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Data_Science">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+        <hasCourseCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasCourseCredits>
+        <hasCourseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasCourseId>
+        <hasCourseName>Master of Science in Data Science</hasCourseName>
+        <hasCourseType>postgraduate</hasCourseType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Physics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Master_of_Science_in_Physics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+        <hasCourseCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasCourseCredits>
+        <hasCourseId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasCourseId>
+        <hasCourseName>Master of Science in Physics</hasCourseName>
+        <hasCourseType>postgraduate</hasCourseType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Mathematics_and_Statistics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Mathematics_and_Statistics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+        <hasDepartmentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDepartmentId>
+        <hasDepartmentName>Mathematics and Statistics</hasDepartmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Mumbai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Mumbai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+        <hasLocation>Mumbai</hasLocation>
+        <hasOfficeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasOfficeId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Naruto_Uzumaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Naruto_Uzumaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+        <Delivers rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Physics_Project_Dissertation"/>
+        <EmployedBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Computer_and_Information_Science"/>
+        <Supervises rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#David_Brown"/>
+        <Supervises rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Emily_Davis"/>
+        <WorksAt rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Glasgow"/>
+        <hasEmployeeDob>1988-09-01</hasEmployeeDob>
+        <hasEmployeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasEmployeeId>
+        <hasEmployeeName>Naruto Uzumaki</hasEmployeeName>
+        <hasEmployeePosition>assistant professor</hasEmployeePosition>
+        <hasEmployeeRole>academic</hasEmployeeRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+        <hasLocation>Paris</hasLocation>
+        <hasOfficeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasOfficeId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Physics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Physics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+        <hasDepartmentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasDepartmentId>
+        <hasDepartmentName>Physics</hasDepartmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Physics_Project_Dissertation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Physics_Project_Dissertation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <RecordsBy rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#1"/>
+        <hasModuleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</hasModuleCode>
+        <hasModuleCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasModuleCredits>
+        <hasModuleName>Physics Project Dissertation</hasModuleName>
+        <hasModuleType>Compulsory</hasModuleType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Pure_and_Applied_Chemistry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Pure_and_Applied_Chemistry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+        <hasDepartmentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasDepartmentId>
+        <hasDepartmentName>Pure and Applied Chemistry</hasDepartmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Software_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Software_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Module"/>
+        <hasModuleCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</hasModuleCode>
+        <hasModuleCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasModuleCredits>
+        <hasModuleName>Software Engineering</hasModuleName>
+        <hasModuleType>Compulsory</hasModuleType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Sydney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Sydney">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+        <hasLocation>Sydney</hasLocation>
+        <hasOfficeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasOfficeId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+        <hasExamRecordId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasExamRecordId>
+        <hasMarkAchieved rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</hasMarkAchieved>
+        <hasSemester>Spring</hasSemester>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+        <hasExamRecordId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasExamRecordId>
+        <hasMarkAchieved rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasMarkAchieved>
+        <hasYear>Spring</hasYear>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+        <hasExamRecordId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasExamRecordId>
+        <hasMarkAchieved rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</hasMarkAchieved>
+        <hasSemester>Winter</hasSemester>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+        <hasExamRecordId rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</hasExamRecordId>
+        <hasMarkAchieved rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasMarkAchieved>
+        <hasSemester>Spring</hasSemester>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+        <hasExamRecordId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasExamRecordId>
+        <hasMarkAchieved rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hasMarkAchieved>
+        <hasSemester>Spring</hasSemester>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</hasYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Strathclyde_Institute_of_Pharmacy_&amp;_Biomedical_Sciences -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Strathclyde_Institute_of_Pharmacy_&amp;_Biomedical_Sciences">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+        <hasDepartmentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDepartmentId>
+        <hasDepartmentName>Strathclyde Institute of Pharmacy &amp; Biomedical Sciences</hasDepartmentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#ExamRecord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Office"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Course"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Employee"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi -->
+

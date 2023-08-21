@@ -1,0 +1,52 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#>
+
+1)
+SELECT ?name ?id
+WHERE {?name rdf:type sh:Student;
+			 sh:hasStudentId ?id .}
+
+SELECT ?class ?name ?id
+WHERE {?name rdf:type sh:Student;
+			 sh:hasStudentName ?name; 
+			 sh:hasStudentId ?id .}
+	
+Final:	
+SELECT ?name ?id
+WHERE {?s	sh:hasStudentName ?name; 
+			sh:hasStudentId ?id .}			 
+			 
+2)
+SELECT ?name ?type
+WHERE {?s	sh:hasCourseName ?name; 
+			sh:hasCourseType ?type .}			 
+
+
+3)
+SELECT ?studentid ?studentname ?coursename ?coursetype
+WHERE {?s	sh:hasStudentId ?studentid; 
+			sh:hasStudentName ?studentname;
+			sh:Registers ?c.
+	   ?c	sh:hasCourseName ?coursename;
+			sh:hasCourseType ?coursetype.}
+ORDER BY ?studentid
+
+4)
+SELECT ?modulecode ?modulename ?employeeid ?employeename
+WHERE {?s	sh:hasEmployeeId ?employeeid; 
+			sh:hasEmployeeName ?employeename;
+			sh:Delivers ?m.
+	   ?m	sh:hasModuleCode ?modulecode;
+			sh:hasModuleName ?modulename.}
+ORDER BY ?modulecode
+
+5)
+SELECT ?studentid ?studentname ?employeename
+WHERE{?s sh:hasEmployeeName ?employeename;
+		 sh:Supervises ?st.
+	  ?st sh:hasStudentId ?studentid;
+		  sh:hasStudentName ?studentname.}
+ORDER BY ?studentid
