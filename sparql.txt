@@ -4,28 +4,19 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX sh: <http://www.semanticweb.org/patel/ontologies/2023/2/Assignment#>
 
-1)
-SELECT ?name ?id
-WHERE {?name rdf:type sh:Student;
-			 sh:hasStudentId ?id .}
-
-SELECT ?class ?name ?id
-WHERE {?name rdf:type sh:Student;
-			 sh:hasStudentName ?name; 
-			 sh:hasStudentId ?id .}
-	
-Final:	
+1) List the ID and name of all students.
 SELECT ?name ?id
 WHERE {?s	sh:hasStudentName ?name; 
 			sh:hasStudentId ?id .}			 
 			 
-2)
+2) List the name of all courses together with their type.
 SELECT ?name ?type
 WHERE {?s	sh:hasCourseName ?name; 
 			sh:hasCourseType ?type .}			 
 
 
-3)
+3) List the ID and name of all students together with the course name and course type that 
+they study.
 SELECT ?studentid ?studentname ?coursename ?coursetype
 WHERE {?s	sh:hasStudentId ?studentid; 
 			sh:hasStudentName ?studentname;
@@ -34,7 +25,7 @@ WHERE {?s	sh:hasStudentId ?studentid;
 			sh:hasCourseType ?coursetype.}
 ORDER BY ?studentid
 
-4)
+4) List the ID and name of all modules together with the name and ID of the member of staff who teaches this module. 
 SELECT ?modulecode ?modulename ?employeeid ?employeename
 WHERE {?s	sh:hasEmployeeId ?employeeid; 
 			sh:hasEmployeeName ?employeename;
@@ -43,7 +34,7 @@ WHERE {?s	sh:hasEmployeeId ?employeeid;
 			sh:hasModuleName ?modulename.}
 ORDER BY ?modulecode
 
-5)
+5) List the ID and name of all students together with the name of their supervisors.
 SELECT ?studentid ?studentname ?employeename
 WHERE{?s sh:hasEmployeeName ?employeename;
 		 sh:Supervises ?st.
